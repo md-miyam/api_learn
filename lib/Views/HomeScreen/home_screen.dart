@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:new_api/ApiServices/api_services.dart';
 import 'package:new_api/model/post_model.dart';
+import '../CreatePostScreen/create_post_screen.dart';
 import '../PostDetailsScreen/post_details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -55,6 +56,9 @@ class _HomeScreenState extends State<HomeScreen> {
           }
         },
       ),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => CreatePostScreen(),));
+      },child: Icon(Icons.add_box_outlined),),
     );
   }
 }
